@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Happy Anniversary Mom & Dad!</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #fff0f5, #ffe0ec);
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3em;
+      color: #e91e63;
+      margin-top: 20px;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 5px #fff; }
+      to { text-shadow: 0 0 20px #ff4081; }
+    }
+
+    .message, .guestbook, .preset, .slideshow {
+      text-align: center;
+      font-size: 1.2em;
+      margin: 20px auto;
+      max-width: 800px;
+      padding: 20px;
+      background: #fff9f9;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      color: #ad1457;
+    }
+
+    .guestbook input, .guestbook textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 2px solid #f06292;
+      border-radius: 8px;
+    }
+
+    .guestbook button, .share-btn, .whatsapp-btn {
+      background: #f06292;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      margin: 10px;
+    }
+
+    .whatsapp-btn {
+      background: #25D366;
+    }
+
+    .guest-messages {
+      margin-top: 20px;
+      text-align: left;
+    }
+
+    .guest-messages p {
+      background: #fff;
+      padding: 10px;
+      border-left: 4px solid #f06292;
+      margin-bottom: 10px;
+      border-radius: 6px;
+    }
+
+    .countdown {
+      text-align: center;
+      font-size: 1.5em;
+      margin-top: 10px;
+      color: #880e4f;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #f06292;
+      color: white;
+      font-weight: bold;
+    }
+
+    .slideshow-container {
+      position: relative;
+      max-width: 100%;
+      margin: auto;
+    }
+
+    .slide-img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+      max-height: 450px;
+      object-fit: cover;
+    }
+
+    .slide-img.active {
+      opacity: 1;
+    }
+
+    .hearts {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 999;
+    }
+
+    .heart, .click-heart {
+      position: absolute;
+      font-size: 24px;
+      color: #ff4081;
+      animation: floatUp 6s linear infinite;
+      opacity: 0.6;
+    }
+
+    .click-heart {
+      animation: pop 1s ease forwards;
+      pointer-events: none;
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(100vh) scale(0.5); opacity: 0; }
+      50% { opacity: 1; }
+      100% { transform: translateY(-10vh) scale(1.2); opacity: 0; }
+    }
+
+    @keyframes pop {
+      0% { transform: scale(0); opacity: 1; }
+      100% { transform: scale(2); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Hearts -->
+  <div class="hearts" id="hearts"></div>
+
+  <!-- Background Music -->
+  <audio autoplay loop>
+    <source src="https://media.vocaroo.com/1boLVWwMt58k" type="audio/mpeg">
+  </audio>
+
+  <h1>💞 Happy Anniversary 💞</h1>
+
+  <div class="countdown">
+    Time together keeps growing: <span id="timer">4676 days together ❤️</span>
+  </div>
+
+  <div class="message">
+    Dear Mom & Dad,<br><br>
+    Your bond is an inspiration. Your love is a blessing.<br>
+    Wishing you a lifetime of joy, health, and love. Happy Anniversary!<br><br>
+    With lots of love,<br>
+    — Aryan 🌹
+  </div>
+
+  <div class="preset">
+    <h2>✨ Beautiful Wishes ✨</h2>
+    <p>💬 "May your bond grow stronger every year and your love be forever blooming."</p>
+    <p>💬 "To the most loving couple—your journey together is a true inspiration."</p>
+    <p>💬 "Wishing you endless laughter, togetherness, and love in all seasons of life."</p>
+  </div>
+
+  <div class="slideshow">
+    <h2>📸 Memories Together</h2>
+    <div class="slideshow-container">
+      <img class="slide-img active" src="https://i.ibb.co/4w3qz8WT/Screenshot-2025-06-28-17-02-24-09-96b26121e545231a3c569311a54cda96.jpg" />
+      <img class="slide-img" src="https://i.ibb.co/2YMzmHnq/Screenshot-2025-06-28-17-02-21-06-96b26121e545231a3c569311a54cda96.jpg" />
+      <img class="slide-img" src="https://i.ibb.co/SwLFqmmY/Screenshot-2025-06-28-17-02-17-73-96b26121e545231a3c569311a54cda96.jpg" />
+      <img class="slide-img" src="https://i.ibb.co/PZsp091Q/Screenshot-2025-06-28-17-02-14-54-96b26121e545231a3c569311a54cda96.jpg" />
+      <img class="slide-img" src="https://i.ibb.co/ycJ9141q/Screenshot-2025-06-28-17-02-11-02-96b26121e545231a3c569311a54cda96.jpg" />
+    </div>
+  </div>
+
+  <div class="guestbook">
+    <h2>📖 Guestbook</h2>
+    <input type="text" id="guestName" placeholder="Your Name" />
+    <textarea id="guestMessage" placeholder="Write a beautiful message..." rows="4"></textarea>
+    <button onclick="addMessage()">Post Message</button>
+
+    <div class="guest-messages" id="messages">
+      <!-- Guest messages will appear here -->
+    </div>
+  </div>
+
+  <div style="text-align:center; margin: 20px;">
+    <button class="share-btn" onclick="sharePage()">📤 Share This Page</button>
+    <a class="whatsapp-btn" href="https://wa.me/?text=💖%204676%20days%20of%20love!%20Check%20out%20this%20special%20anniversary%20page%20by%20Aryan%20🎉%0Ahttps://example.com" target="_blank">
+      🟢 Share on WhatsApp
+    </a>
+  </div>
+
+  <footer>
+    Made with ❤️ by Aryan for the best parents in the world!<br>
+    Developer &lt;ARYAN&gt;
+  </footer>
+
+  <script>
+    // Fixed countdown text
+    document.getElementById("timer").textContent = `4676 days together ❤️`;
+
+    // Guestbook load
+    window.onload = function () {
+      const saved = localStorage.getItem("guestbookMessages");
+      if (saved) {
+        document.getElementById("messages").innerHTML = saved;
+      }
+    };
+
+    function addMessage() {
+      const name = document.getElementById("guestName").value.trim();
+      const msg = document.getElementById("guestMessage").value.trim();
+      if (!name || !msg) {
+        alert("Please fill in both fields!");
+        return;
+      }
+
+      const messageHTML = `<p><strong>${name}:</strong> ${msg}</p>`;
+      const messagesDiv = document.getElementById("messages");
+      messagesDiv.innerHTML = messageHTML + messagesDiv.innerHTML;
+      localStorage.setItem("guestbookMessages", messagesDiv.innerHTML);
+
+      document.getElementById("guestName").value = "";
+      document.getElementById("guestMessage").value = "";
+    }
+
+    // Slideshow
+    let currentSlide = 0;
+    const slides = document.querySelectorAll(".slide-img");
+
+    function showNextSlide() {
+      slides[currentSlide].classList.remove("active");
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add("active");
+    }
+    setInterval(showNextSlide, 3000);
+
+    // Floating Hearts
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.className = "heart";
+      heart.textContent = "❤️";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = 3 + Math.random() * 3 + "s";
+      heart.style.fontSize = 16 + Math.random() * 24 + "px";
+      document.getElementById("hearts").appendChild(heart);
+      setTimeout(() => heart.remove(), 7000);
+    }
+    setInterval(createHeart, 400);
+
+    // Click effect
+    document.addEventListener('click', function(e) {
+      const heart = document.createElement('div');
+      heart.className = 'click-heart';
+      heart.textContent = '💖';
+      heart.style.left = e.pageX + 'px';
+      heart.style.top = e.pageY + 'px';
+      heart.style.position = 'absolute';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 1000);
+    });
+
+    // Real Share Button
+    function sharePage() {
+      if (navigator.share) {
+        navigator.share({
+          title: 'Happy Anniversary!',
+          text: '💖 4676 days of love! Celebrate this beautiful journey of Aryan\'s parents 🎉',
+          url: window.location.href
+        }).then(() => {
+          alert('Thanks for sharing!');
+        }).catch(err => {
+          alert('Could not share: ' + err);
+        });
+      } else {
+        alert('Sharing not supported. Please copy the URL manually.');
+      }
+    }
+  </script>
+</body>
+</html>
